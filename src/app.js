@@ -1,11 +1,11 @@
 import readline from 'node:readline';
-import os from 'os';
+import os from 'node:os';
 
-import * as utils from './utils';
-import * as operations from './operations';
+import * as utils from '../src/utils/index.js';
+import * as operations from '../src/operations/index.js';
 
 async function startFileManager() {
-  const username = operations.getUsername();
+  const username = utils.getUsername();
   let currentDir = os.homedir();
 
   const rl = readline.createInterface({
@@ -18,6 +18,7 @@ async function startFileManager() {
 
   function prompt() {
     rl.question('> ', async (input) => {
+      const result = await utils.processCommand(input, currentDir, username);
       if (result?.newDir) {
         currentDir = result.newDir;
       }

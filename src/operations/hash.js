@@ -1,6 +1,6 @@
-import fs from 'fs';
-import { createHash } from 'crypto';
-import path from 'path';
+import fs from 'node:fs';
+import { createHash } from 'node:crypto';
+import path from 'node:path';
 
 export async function calculateHash(currentDir, filePath) {
   try {

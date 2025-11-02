@@ -1,22 +1,6 @@
-import { calculateHash } from './hash';
-import { goUp, changeDir, listDir } from './fileNavigations';
-import {
-  readFile,
-  createFile,
-  removeFile,
-  moveFile,
-  createDir,
-  renameFile,
-  copyFile
-} from './fileOperations';
-import { getOSInfo } from './osInfo';
-import { compressFile, decompressFile } from './compression';
-
+export { calculateHash } from './hash.js';
+export { goUp, changeDir, listDir } from './fileNavigations.js';
 export {
-  calculateHash,
-  goUp,
-  changeDir,
-  listDir,
   readFile,
   createFile,
   removeFile,
@@ -24,7 +8,23 @@ export {
   createDir,
   renameFile,
   copyFile,
-  getOSInfo,
-  compressFile,
-  decompressFile,
-};
+} from './fileOperations.js';
+export { getOSInfo } from './osInfo.js';
+export { compressFile, decompressFile } from './compression.js';
+
+// export {
+//   calculateHash,
+//   goUp,
+//   changeDir,
+//   listDir,
+//   readFile,
+//   createFile,
+//   removeFile,
+//   moveFile,
+//   createDir,
+//   renameFile,
+//   copyFile,
+//   getOSInfo,
+//   compressFile,
+//   decompressFile,
+// };
