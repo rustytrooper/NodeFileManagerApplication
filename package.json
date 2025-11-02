@@ -1,0 +1,26 @@
+{
+  "name": "nodefilemanagerapplication",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/rustytrooper/NodeFileManagerApplication#readme",
+  "bugs": {
+    "url": "https://github.com/rustytrooper/NodeFileManagerApplication/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustytrooper/NodeFileManagerApplication.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "start": "node src/app.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
