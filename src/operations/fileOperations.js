@@ -56,9 +56,9 @@ export async function renameFile(currentDir, oldPath, newName) {
   }
 }
 
-export async function copyFile(currentDir, sourcePath, destPath) {
+export async function copyFile(currentDir, sourceFile, destPath) {
   try {
-    const absoluteSourcePath = path.resolve(currentDir, sourcePath);
+    const absoluteSourcePath = path.resolve(currentDir, sourceFile);
     let absoluteDestPath = path.resolve(currentDir, destPath);
 
     try {

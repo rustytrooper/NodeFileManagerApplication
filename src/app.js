@@ -1,10 +1,12 @@
 import readline from 'node:readline';
 import os from 'node:os';
-
 import * as utils from '../src/utils/index.js';
-import * as operations from '../src/operations/index.js';
 
 async function startFileManager() {
+  process.on('SIGINT', () => {
+    console.log(`\nThank you for using File Manager, ${username}, goodbye!`);
+    process.exit(0);
+  });
   const username = utils.getUsername();
   let currentDir = os.homedir();
 

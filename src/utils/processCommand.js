@@ -11,8 +11,7 @@ export async function processCommand(input, currentDir, username) {
         console.log(
           `\nThank you for using File Manager, ${username}, goodbye!`
         );
-        rl.close();
-        return { shouldExit: true };
+        process.exit(0);
 
       case 'up':
         return { newDir: await operations.goUp(currentDir) };
