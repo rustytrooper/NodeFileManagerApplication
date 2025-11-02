@@ -3,6 +3,8 @@ export function showCurrentDir(dir) {
 }
 
 export function getUsername() {
-  const usernameArg = process.argv.find((arg) => arg.startsWith('--username='));
+  const args = process.argv.slice(2);
+  const usernameArg = args.find((arg) => arg.startsWith('--username='));
+  console.log(usernameArg);
   return usernameArg ? usernameArg.split('=')[1] : 'User';
 }
